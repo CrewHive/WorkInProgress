@@ -1,0 +1,30 @@
+@use "../../../styles/palette" as *;
+
+nav {
+    margin: 0;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: $b4;
+    display: flex;
+    align-items: center;
+    padding-inline: 1rem;
+}
+
+.navbar-logo img {
+    display: block;
+    height: 50px;
+    width: auto;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.navbar-brand {
+    margin: 0 auto;
+    font-size: 2rem;
+    font-weight: 800;
+    color: $b1;
+}
