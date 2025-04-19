@@ -1,10 +1,9 @@
 @use "../styles/palette" as *;
 
 :host {
-
     display: flex;
-    min-height: 100dvh;
     flex-direction: column;
+    min-height: 100dvh;
     background: $wt1;
     color: $b5;
     font-family: 'Crimson Pro', serif;
@@ -12,8 +11,4 @@
 
 .content {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }

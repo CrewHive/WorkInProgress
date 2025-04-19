@@ -1,14 +1,13 @@
 @use "../../../styles/palette" as *;
 
-nav {
-    margin: 0;
-}
-
-.navbar {
+:host {
     position: sticky;
     top: 0;
     z-index: 1000;
     background-color: $b4;
+}
+
+.navbar {
     display: flex;
     align-items: center;
     padding-inline: 1rem;
