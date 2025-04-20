@@ -1,0 +1,190 @@
+@use "../../../styles/palette" as *;
+
+:host {
+    background-color: $b4;
+}
+
+.footer {
+    display: grid;
+    gap: 1rem;
+    padding: .75rem;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+
+.footer-left img {
+    display: block;
+    width: 50px;
+    height: auto;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $b1;
+}
+
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.footer-center input{
+    padding: .2rem .4rem;
+    border: none;
+    border-radius: 5px;
+    min-width: 0;
+}
+
+:root {
+    --ta-w: 120%;
+    --ta-h: auto;
+}
+
+.footer-center textarea {
+    width: var(--ta-w);
+    height: var(--ta-h);
+    min-height:5rem;
+    max-height: 60vh;
+    padding: .2rem .4rem;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    overflow-y: visible;
+    min-width: 0;
+}
+
+.footer-center button {
+    width: 20%;
+    min-width: 20%;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: $wt1;
+    color: $b5;
+    cursor: pointer;
+}
+
+.footer-center button:hover {
+    background-color: $y2;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+}
+
+.coming, .contact {
+    margin: 0;
+    font-weight: 500;
+    color: $b1;
+}
+
+.footer-right__logos {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-right__logos img {
+    display: block;
+    width: 40px;
+    height: auto;
+}
+
+@media (min-width:200px) and (max-width: 1023px) {
+
+    .footer{
+        grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
+        align-items: flex-end;
+    }
+
+    .footer-left {
+        justify-content: flex-start;
+    }
+
+    .footer-center {
+        justify-content: center;
+    }
+
+    .footer-center input{
+        width: 30%;
+    }
+
+    .footer-center textarea {
+        width: 45%;
+        height: auto;
+        min-height: 5rem;
+        max-height: 60vh;
+    }
+
+    .footer-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .coming, .contact {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1024px){
+    .footer{
+      grid-template-columns: 1fr 2fr 1fr;
+      align-items: center;
+    }
+
+    .footer-left {
+        justify-content: flex-start;
+    }
+
+    .footer-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-center input{
+        width: 8vw;
+    }
+
+    .footer-center textarea {
+        width: 20vw;
+        height: auto;
+        min-height: 5rem;
+        max-height: 60vh;
+    }
+
+    .footer-center button {
+        width: 10%;
+        min-width: 10%;
+        max-width: 10%;
+    }
+
+    .footer-right {
+        display:flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-right__logos img {
+        width: 50px;
+        height: auto;
+    }
+
+    .coming, .contact {
+        font-size: 1.8rem;
+    }
+  }

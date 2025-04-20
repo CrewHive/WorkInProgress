@@ -1,1 +1,58 @@
-<p>footer works!</p>
+
+<footer class="footer">
+    <div class="footer-left" aria-label="Brand">
+        <img
+            src="assets/img/logo-128.png"
+            srcset="assets/img/logo-64.png 64w,
+                    assets/img/logo-128.png 128w,
+                    assets/img/logo-256.png 256w"
+            sizes="(max-width: 640px) 80px, 120px"
+            alt="Logo">
+        <span class="title">&copy; 2025 {{ title }}</span>
+    </div>
+
+    <form class="footer-center" aria-label="Contact">
+
+        <span class="contact">Contact us</span>
+        <label for="email">
+            <input type="email" placeholder="your@email.com" required>
+        </label>
+        <label for="msg">
+            <textarea id="msg" placeholder="Your message" required></textarea>
+        </label>
+
+        <button type="submit">Send</button>
+    </form>
+
+    <div class="footer-right">
+        <p class="coming">Presto su:</p>
+
+        <div class="footer-right__logos">
+            <img 
+            src="assets/img/ps128.png"
+            srcset="assets/img/ps64.png 64w,
+                    assets/img/ps128.png 128w,
+                    assets/img/ps256.png 256w"
+            sizes="(max-width: 640px) 80px, 120px"
+            alt="Disponibile su Google Play">
+        <img 
+            src="assets/img/as128.png"
+            srcset="assets/img/as64.png 64w,
+                    assets/img/as128.png 128w,
+                    assets/img/as256.png 256w"
+            sizes="(max-width: 640px) 80px, 120px"
+            alt="Disponibile su App Store">
+        </div>
+    </div>
+
+</footer>
+
+<script>
+    const msg = document.getElementById('msg');
+    const autoGrow = el => {
+      el.style.height = 'auto';
+      el.style.height = `${el.scrollHeight}px`;
+    };
+    autoGrow(msg);
+    msg.addEventListener('input', () => autoGrow(msg));
+</script>
