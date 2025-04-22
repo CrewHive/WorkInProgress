@@ -11,14 +11,16 @@
         <span class="title">&copy; 2025 {{ title }}</span>
     </div>
 
-    <form class="footer-center" aria-label="Contact">
+    <form #emailForm="ngForm" (ngSubmit)="onSubmit(emailForm)" id="email-form" class="footer-center" aria-label="Contact">
 
         <span class="contact">Contact us</span>
+
         <label for="email">
-            <input type="email" placeholder="your@email.com" required>
+            <input type="email" placeholder="your@email.com" name="email" ngModel required>
         </label>
+
         <label for="msg">
-            <textarea id="msg" placeholder="Your message" required></textarea>
+            <textarea name="msg" placeholder="Your message" ngModel required></textarea>
         </label>
 
         <button type="submit">Send</button>
@@ -46,13 +48,3 @@
     </div>
 
 </footer>
-
-<script>
-    const msg = document.getElementById('msg');
-    const autoGrow = el => {
-      el.style.height = 'auto';
-      el.style.height = `${el.scrollHeight}px`;
-    };
-    autoGrow(msg);
-    msg.addEventListener('input', () => autoGrow(msg));
-</script>
