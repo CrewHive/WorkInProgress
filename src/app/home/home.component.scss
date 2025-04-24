@@ -1,0 +1,17 @@
+@use "../../styles/palette" as *;
+
+.wip-section {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.wip {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: $b3;
+}
+
+.wip a {
+    text-decoration: none;
+    color: inherit;
+}
