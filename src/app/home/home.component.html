@@ -3,4 +3,18 @@
     <div class="wip animate__animated animate__pulse animate__infinite"><a id="wip" href="">Work in Progress</a></div>
 </section>
 
+<div #carousel class="carousel">
+    <div #carouselItem class="carousel-item"
+        *ngFor="let item of carouselItems;
+        let i =index;"
+        [ngClass]="{'show': i === currentIndex}">
+        {{ item }}
+    </div>
+
+    <div class="carousel-buttons">
+        <button (click)="prev()" class="carousel-control-prev">Prev</button>
+        <button (click)="next()" class="carousel-control-next">Next</button>
+    </div>
+</div>
+
 <section style="height:1000px">p</section>
